@@ -13,3 +13,4 @@ map("n", "<F1>", function()
 end, { desc = "Add 42 Header" })
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+map("n", "-", "<CMD>Oil<CR>", { desc = "Open Oil file explorer" })

@@ -31,6 +31,28 @@ return {
 		end,
 	},
 
+  {
+    "stevearc/oil.nvim",
+    lazy = false, -- recommandé, sinon ça peut être chiant à init dans tous les cas
+    opts = {
+      default_file_explorer = true, -- remplace netrw pour `nvim .`
+      columns = {
+        "icon",
+        -- "permissions",
+        -- "size",
+        -- "mtime",
+      },
+      view_options = {
+        show_hidden = true, -- si tu veux voir les fichiers cachés
+      },
+    },
+    -- pour les icônes, choisis UN des deux:
+    dependencies = {
+      -- { "nvim-tree/nvim-web-devicons" }, -- si tu as déjà ça, ok
+      { "nvim-mini/mini.icons", opts = {} }, -- sinon mini.icons marche très bien
+    },
+  },
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
