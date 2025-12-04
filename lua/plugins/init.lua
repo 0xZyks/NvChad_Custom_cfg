@@ -31,28 +31,39 @@ return {
 		end,
 	},
 
-  {
-    "stevearc/oil.nvim",
-    lazy = false, -- recommandé, sinon ça peut être chiant à init dans tous les cas
-    opts = {
-      default_file_explorer = true, -- remplace netrw pour `nvim .`
-      columns = {
-        "icon",
-        -- "permissions",
-        -- "size",
-        -- "mtime",
-      },
-      view_options = {
-        show_hidden = true, -- si tu veux voir les fichiers cachés
-      },
-    },
-    -- pour les icônes, choisis UN des deux:
-    dependencies = {
-      -- { "nvim-tree/nvim-web-devicons" }, -- si tu as déjà ça, ok
-      { "nvim-mini/mini.icons", opts = {} }, -- sinon mini.icons marche très bien
-    },
-  },
-
+	{
+		"stevearc/oil.nvim",
+		lazy = false,
+		opts = {
+			default_file_explorer = true,
+			view_options = {
+				show_hidden = true,
+			},
+			keymaps = {
+				-- garder les classiques si tu veux
+				["g?"] = "actions.show_help",
+				["<CR>"] = "actions.select",
+				["<C-s>"] = "actions.select_vsplit",
+				["<C-h>"] = "actions.select_split",
+				["<C-t>"] = "actions.select_tab",
+				["<C-p>"] = "actions.preview",
+				["<C-c>"] = "actions.close",
+				["<C-l>"] = "actions.refresh",
+				-- ce qui nous intéresse :
+				["-"] = "actions.close",      -- dans Oil: '-' ferme le bufferline
+				["<BS>"] = "actions.parent",  -- backspace pour remonter d'un dossier--
+				-- tu peux aussi garder d'autres si tu veux
+				["_"] = "actions.open_cwd",
+				["`"] = "actions.cd",
+				["~"] = "actions.tcd",
+				["g."] = "actions.toggle_hidden",
+			},
+		},
+		dependencies = {
+			{ "nvim-mini/mini.icons", opts = {} },
+			-- ou "nvim-tree/nvim-web-devicons" si tu préfère
+		},
+	},
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
