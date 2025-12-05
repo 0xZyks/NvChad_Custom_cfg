@@ -219,6 +219,10 @@ map("n", "<F1>", function()
     vim.cmd("Stdheader")
   end
 end, { desc = "Add 42 Header" })
+-- Mapping F3 en VISUAL pour toggle /* ... */
+vim.keymap.set("v", "<F3>", function()
+  require("comments_block").toggle_block_comment_visual()
+end, { desc = "Toggle block comment /* */" })
 
 ---------------------------------------------------------------------
 -- Nouveau mapping : alignement smart du bloc
