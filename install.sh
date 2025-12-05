@@ -6,7 +6,7 @@
 #    By: tsignori <tsignori@student.42perpignan.fr  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/05 11:52:27 by tsignori          #+#    #+#              #
-#    Updated: 2025/12/05 11:52:34 by tsignori         ###   ########.fr        #
+#    Updated: 2025/12/05 11:55:35 by tsignori         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -106,3 +106,5 @@ link_with_backup "$NVIM_SRC" "$NVIM_DEST" "$backup_choice"
 
 echo
 echo "✅ Neovim config installée."
+echo ""
+echo "Thank's for using Fluid :)"
