@@ -220,10 +220,12 @@ map("n", "<F1>", function()
   end
 end, { desc = "Add 42 Header" })
 -- Mapping F3 en VISUAL pour toggle /* ... */
+-- VISUAL: F3 -> toggle block comment sur la sélection
 vim.keymap.set("v", "<F3>", function()
-  require("comments_block").toggle_block_comment_visual()
-end, { desc = "Toggle block comment /* */" })
-
+  local start_line = vim.fn.line("v") -- ligne où le Visual a commencé
+  local end_line = vim.fn.line(".")   -- ligne du curseur actuel
+  require("comments_block").toggle_block_comment(start_line, end_line)
+end, { desc = "Toggle block comment (visual selection)" })
 ---------------------------------------------------------------------
 -- Nouveau mapping : alignement smart du bloc
 ---------------------------------------------------------------------
