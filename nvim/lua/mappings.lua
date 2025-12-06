@@ -236,6 +236,9 @@ map("n", "<F4>", "<cmd>ToggleTerm size=15 direction=float<CR>", { desc = "Termin
 map("n", "<F5>", "<cmd>ToggleTerm size=10 direction=horizontal<CR>", { desc = "Terminal vertical" })
 -- Raccourci pour revenir au mode normal depuis un terminal-
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
+
+-- Close current BufferTab
+map("n", "<leader>q", "<cmd>bd<CR>", { desc = "Close Current BufferTab"});
 ---------------------------------------------------------------------
 -- Nouveau mapping : alignement smart du bloc
 ---------------------------------------------------------------------
