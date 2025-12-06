@@ -226,6 +226,16 @@ vim.keymap.set("v", "<F3>", function()
   local end_line = vim.fn.line(".")   -- ligne du curseur actuel
   require("comments_block").toggle_block_comment(start_line, end_line)
 end, { desc = "Toggle block comment (visual selection)" })
+-- Toggle terminal flottant avec Ctrl+\
+map({ "n", "t" }, "<C-\\>", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })
+
+-- Terminal horizontal
+map("n", "<F4>", "<cmd>ToggleTerm size=15 direction=float<CR>", { desc = "Terminal horizontal" })
+
+-- Terminal vertical
+map("n", "<leader>tv", "<cmd>ToggleTerm size=50 direction=vertical<CR>", { desc = "Terminal vertical" })
+-- Raccourci pour revenir au mode normal depuis un terminal-
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 ---------------------------------------------------------------------
 -- Nouveau mapping : alignement smart du bloc
 ---------------------------------------------------------------------

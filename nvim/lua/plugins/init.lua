@@ -64,6 +64,16 @@ return {
 			-- ou "nvim-tree/nvim-web-devicons" si tu préfère
 		},
 	},
+
+	-- ~/.config/nvim/lua/plugins/toggleterm.lua
+	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		lazy = false;
+		config = function()
+			require("toggleterm").setup()
+		end,
+	},
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
