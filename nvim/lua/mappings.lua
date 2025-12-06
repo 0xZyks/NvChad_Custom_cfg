@@ -233,7 +233,7 @@ map({ "n", "t" }, "<C-\\>", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })
 map("n", "<F4>", "<cmd>ToggleTerm size=15 direction=float<CR>", { desc = "Terminal horizontal" })
 
 -- Terminal vertical
-map("n", "<leader>tv", "<cmd>ToggleTerm size=50 direction=vertical<CR>", { desc = "Terminal vertical" })
+map("n", "<F5>", "<cmd>ToggleTerm size=10 direction=horizontal<CR>", { desc = "Terminal vertical" })
 -- Raccourci pour revenir au mode normal depuis un terminal-
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 ---------------------------------------------------------------------
