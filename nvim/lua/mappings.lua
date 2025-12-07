@@ -39,9 +39,6 @@ map("n", "<leader>q", "<cmd>bd<CR>", { desc = "Close Current BufferTab"});
 -- Nouveau mapping : alignement smart du bloc
 ---------------------------------------------------------------------
 
--- SPACE + a en VISUEL
-map("v", "<F2>", align_42, { desc = "Indent + 42-align declarations" })
-
 -- Si un jour tu règles ton terminal pour <S-Tab>, tu peux aussi faire :
 -- map("v", "<S-Tab>", smart_align_block, { desc = "Smart indent + align declarations" })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
